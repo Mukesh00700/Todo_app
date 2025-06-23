@@ -1,5 +1,6 @@
 import { useState } from 'react'
-export function CreateTodo(){
+import { Todos } from './Todos';
+export function CreateTodo(props){
     const[title,setTitle] = useState("");
     const[description,setDescription] = useState("");
     return <div>
@@ -28,6 +29,10 @@ export function CreateTodo(){
                 const json = await res.json();
                 alert("Todo added");
             })
+            props.setTodos([...Todos,{
+                title:title,
+                description:description
+            }])
         }}>Add a todo</button>
     </div>
 }
