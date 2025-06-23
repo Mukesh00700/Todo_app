@@ -1,0 +1,14 @@
+# Ignore backend and frontend node_modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Ignore environment variable files (contains passwords)
+.env
+
+# Ignore build/dist folders
+dist/
+build/
+
+# macOS extra system file (just in case)
+.DS_Store
